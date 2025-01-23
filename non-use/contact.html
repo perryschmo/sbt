@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decision Tree</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" id="question-container">
+      <h2 id="question">Do you have panels on your roof?</h2>
+      <button class="raise" onclick="handleResponse('yesPanels')">Yes</button>
+      <button class="raise" onclick="handleResponse('noPanels')">No</button>
+    </div>
+
+    <div id="battery-question" class="hidden">
+      <h2 id="battery-question-text">Do you have battery packs?</h2>
+      <button class="raise" onclick="handleResponse('yesBatteries')">
+        Yes
+      </button>
+      <button class="raise" onclick="handleResponse('noBatteries')">No</button>
+    </div>
+
+    <div id="precision-question" class="hidden">
+      <h2 id="precision-question-text">
+        Do you want a more precise or less precise option?
+      </h2>
+      <button class="raise" onclick="handleResponse('morePrecise')">
+        More Precise
+      </button>
+      <button class="raise" onclick="handleResponse('lessPrecise')">
+        Less Precise
+      </button>
+    </div>
+
+    <div id="result" class="hidden"></div>
+
+    <script>
+      function handleResponse(response) {
+        const questionContainer = document.getElementById("question-container");
+        const batteryQuestion = document.getElementById("battery-question");
+        const precisionQuestion = document.getElementById("precision-question");
+        const result = document.getElementById("result");
+
+        questionContainer.classList.add("hidden");
+        batteryQuestion.classList.add("hidden");
+        precisionQuestion.classList.add("hidden");
+        result.classList.add("hidden");
+
+        if (response === "yesPanels") {
+          batteryQuestion.classList.remove("hidden");
+        } else if (response === "noPanels") {
+          precisionQuestion.classList.remove("hidden");
+        } else if (response === "yesBatteries" || response === "noBatteries") {
+          precisionQuestion.classList.remove("hidden");
+        } else if (response === "morePrecise" || response === "lessPrecise") {
+          result.classList.remove("hidden");
+          if (response === "morePrecise") {
+            result.innerHTML = "<h2>You chose a more precise option.</h2>";
+          } else {
+            result.innerHTML = "<h2>You chose a less precise option.</h2>";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

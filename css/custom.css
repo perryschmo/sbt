@@ -1,0 +1,94 @@
+.text-primary.mb-0 {
+  color: rgb(25, 29, 55) !important; /* Use !important if necessary */
+}
+
+.text-primary {
+  color: rgba(41, 141, 42) !important; /* Use !important if necessary */
+}
+
+.navbar-nav .nav-link {
+  color: rgb(
+    25,
+    29,
+    55
+  ) !important; /* Replace #yourcolor with your desired color */
+}
+
+/* Default state of the accordion button */
+.accordion-button {
+  background-color: transparent; /* No fill color */
+  color: rgb(0, 0, 0) !important; /* Desired text color */
+  border: none; /* Remove border if desired */
+}
+
+/* Change background color of the entire copyright section */
+.container-fluid.copyright {
+  background-color: #333; /* Example: dark gray */
+}
+
+/* Change background color of the inner container */
+.container.copyright {
+  background-color: #444; /* Example: slightly lighter gray */
+}
+
+.back-to-top {
+  background-color: rgba(
+    41,
+    141,
+    42
+  ) !important; /* Change to your desired background color */
+
+  border: none; /* Remove any border if needed */
+}
+
+.navbar-nav {
+  display: flex; /* Use flexbox to fill the space */
+  justify-content: space-around; /* Distribute space evenly between items */
+  align-items: center; /* Center items vertically */
+  height: 100%; /* Ensure the navbar items take full height */
+}
+
+.nav-item {
+  flex: 1; /* Allow each nav item to grow and fill the space */
+}
+
+.nav-link {
+  display: block; /* Make the link a block element */
+  padding: 15px 20px; /* Add padding for better spacing */
+  color: rgb(25, 29, 55); /* Set text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 25px; /* Make the links rounded */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  text-align: center; /* Center text within each nav item */
+}
+
+/* Hover effect */
+.nav-link:hover {
+  background-color: rgba(25, 29, 55, 0.1); /* Light background on hover */
+  color: rgb(25, 29, 55); /* Keep text color on hover */
+}
+
+/* Center the decision tree content */
+#decisionTree {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+
+/* Style for large buttons */
+.btn-large {
+  padding: 15px 30px; /* Increase padding for larger buttons */
+  font-size: 1.2rem; /* Increase font size */
+  background-color: black;
+}
+
+/* Make buttons round */
+.rounded-circle {
+  border-radius: 50%; /* Make buttons round */
+  width: 60px; /* Set width */
+  height: 60px; /* Set height */
+  display: flex; /* Flexbox for centering text */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+}
